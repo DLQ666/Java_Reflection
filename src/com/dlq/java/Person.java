@@ -12,6 +12,7 @@ public class Person {
     public int age;
 
     public Person() {
+        System.out.println("asdasdasdasd");
     }
 
     public Person(String name, int age) {
