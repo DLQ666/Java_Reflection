@@ -62,10 +62,10 @@ public class ReflectionDemo {
         Person p = (Person) obj;
         System.out.println(p.toString());
         //2、通过反射，调用对象指定的属性、方法
+        //调用属性
         Field age = clazz.getDeclaredField("age");
         age.set(p,10);
         System.out.println(p.toString());
-
         //调用方法
         Method show = clazz.getDeclaredMethod("show");
         show.invoke(p);
@@ -78,13 +78,11 @@ public class ReflectionDemo {
         cons1.setAccessible(true);
         Person p1 = cons1.newInstance("Jerrt");
         System.out.println(p1);
-
         //调用私有属性
         Field name = clazz.getDeclaredField("name");
         name.setAccessible(true);
         name.set(p1,"HanMeimei");
         System.out.println(p1);
-
         //调用私有的方法
         Method showNation = clazz.getDeclaredMethod("showNation", String.class);
         showNation.setAccessible(true);
