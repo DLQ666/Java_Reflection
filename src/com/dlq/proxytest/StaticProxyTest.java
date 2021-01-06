@@ -1,4 +1,4 @@
-package com.dlq.staticproxy;
+package com.dlq.proxytest;
 
 /**
  * 静态代理举例

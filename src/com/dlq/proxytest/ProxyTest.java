@@ -1,4 +1,4 @@
-package com.dlq.dynamicproxy;
+package com.dlq.proxytest;
 
 /**
  *@program: Java_Reflection
@@ -6,6 +6,7 @@ package com.dlq.dynamicproxy;
  *@author: Hasee
  *@create: 2020-07-24 19:45
  */
+
 
 
 import java.lang.reflect.InvocationHandler;
@@ -87,8 +88,8 @@ public class ProxyTest {
 
         System.out.println("******************************************");
 
-//        NikeClothFactory nikeClothFactory = new NikeClothFactory();
-//        ClothFactory proxyInstance1 = (ClothFactory) ProxyFactory.getProxyInstance(nikeClothFactory);
-//        proxyInstance1.produceCloth();
+        NikeClothFactory nikeClothFactory = new NikeClothFactory();
+        ClothFactory proxyInstance1 = (ClothFactory) ProxyFactory.getProxyInstance(nikeClothFactory);
+        proxyInstance1.produceCloth();
     }
 }

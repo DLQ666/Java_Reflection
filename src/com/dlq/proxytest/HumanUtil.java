@@ -1,4 +1,4 @@
-package com.dlq.dynamicproxy;
+package com.dlq.proxytest;
 
 /**
  *@program: Java_Reflection
