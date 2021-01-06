@@ -69,7 +69,7 @@ public class OtherTest {
         ParameterizedType paramType = (ParameterizedType) genericSuperclass;
         //获取泛型类型
         Type[] actualTypeArguments = paramType.getActualTypeArguments();
-//        System.out.println(actualTypeArguments[0].getTypeName());
+//        System.out.println(actualTypeArguments[0].getTypeName());//或者
         System.out.println(((Class)actualTypeArguments[0]).getName());
     }
 

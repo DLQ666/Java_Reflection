@@ -87,6 +87,5 @@ public class MethodTest {
 
             System.out.println();
         }
-
     }
 }

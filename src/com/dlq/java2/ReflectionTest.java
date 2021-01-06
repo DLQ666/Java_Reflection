@@ -96,6 +96,7 @@ public class ReflectionTest {
         Method showDesc = clazz.getDeclaredMethod("showDesc");
         showDesc.setAccessible(true);
         //如果调用的运行时类中的方法没有返回值，则此invoke()返回null
+//        Object returnVal = showDesc.invoke(null);
         Object returnVal = showDesc.invoke(Person.class);
         System.out.println(returnVal);//null
     }

@@ -32,7 +32,6 @@ public class NewInstanceTest {
          */
         Person person = clazz.newInstance();
         System.out.println(person);
-
     }
 
     //体会反射的动态性
@@ -59,7 +58,6 @@ public class NewInstanceTest {
                 e.printStackTrace();
             }
         }
-
     }
 
     /**

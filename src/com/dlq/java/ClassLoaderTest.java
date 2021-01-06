@@ -41,16 +41,15 @@ public class ClassLoaderTest {
         Properties properties = new Properties();
         //此时的文件默认在当前的module下。
         //读取配置文件的方式一：
-//        FileInputStream fis = new FileInputStream("jdbc1.properties");
-//        FileInputStream fis = new FileInputStream("D:\\IDEA_workspace\\Java_Reflection\\src\\jdbc1.properties");
-        FileInputStream fis = new FileInputStream("src\\jdbc1.properties");
-        properties.load(fis);
+//        FileInputStream fis = new FileInputStream("jdbc.properties");
+//        FileInputStream fis = new FileInputStream("src\\jdbc1.properties");
+//        properties.load(fis);
 
         //读取配置文件的方式二：ClassLoader
         //配置文件默认识别为：当前module的src下
-//        ClassLoader classLoader = ClassLoaderTest.class.getClassLoader();
-//        InputStream resourceAsStream = classLoader.getResourceAsStream("jdbc1.properties");
-//        properties.load(resourceAsStream);
+        ClassLoader classLoader = ClassLoaderTest.class.getClassLoader();
+        InputStream resourceAsStream = classLoader.getResourceAsStream("jdbc1.properties");
+        properties.load(resourceAsStream);
 
         String user = properties.getProperty("user");
         String password = properties.getProperty("password");
