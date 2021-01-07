@@ -1,19 +1,26 @@
 package com.dlq.proxytest;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
+
 /**
  *@program: Java_Reflection
  *@description: 动态代理
  *@author: Hasee
  *@create: 2020-07-24 19:45
  */
+//演示AOP切面操作
+class HumanUtil {
+    public void method1(){
+        System.out.println("=====================通用方法一=====================");
+    }
 
-
-
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-
-
+    public void method2(){
+        System.out.println("=====================通用方法二=====================");
+    }
+}
 //通用接口
 interface Human {
     //信仰方法
@@ -45,8 +52,7 @@ class ProxyFactory{
 
         handler.bind(obj);
 
-        Object o = Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), handler);
-        return o;
+        return Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), handler);
     }
 }
 
